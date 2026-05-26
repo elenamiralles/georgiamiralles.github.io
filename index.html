@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Georgia Miralles</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #222;
+      background: #fafafa;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 60px 40px;
+    }
+
+    header h1 { font-size: 2.2rem; font-weight: 600; }
+    header p  { margin-top: 8px; opacity: 0.75; font-size: 1.05rem; }
+
+    nav {
+      background: #16213e;
+      padding: 12px 40px;
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #aac4ff;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: white; }
+
+    main {
+      max-width: 860px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    section { margin-bottom: 52px; }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #1a1a2e;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .project-card p  { color: #555; font-size: 0.95rem; }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #3b5bdb;
+      text-decoration: none;
+    }
+
+    .project-card a:hover { text-decoration: underline; }
+
+    .tags {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #eef2ff;
+      color: #3b5bdb;
+      font-size: 0.8rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      font-size: 0.85rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Georgia Miralles</h1>
+    <p>M.S. Applied Mathematics · SDSU · Dynamical Systems & Computational Modeling</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm a first-year M.S. student in Applied Mathematics at San Diego State University,
+        with a background in Mechanical Engineering from Cal Poly SLO. My work sits at the
+        intersection of dynamical systems, computational PDEs, and scientific computing.
+        I'm especially interested in data-driven modeling and environmental applications.
+      </p>
+
+    </section>
+
+
+    <style>
+  .timeline { border-left: 2px solid #e0e0e0; padding-left: 24px; }
+  .timeline-item { margin-bottom: 24px; position: relative; }
+  .timeline-item::before {
+    content: '';
+    width: 10px; height: 10px;
+    background: #3b5bdb;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px; top: 6px;
+  }
+  .timeline-item .date { font-size: 0.85rem; color: #888; }
+</style>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="date">2025 – present</div>
+      <div class="date">Expected Matriculation May 2027</div>
+      <h3>M.S. Applied Mathematics — <a href="https://math.sdsu.edu/programs/masters_mathematics/ms_applied_mathematics_dynamical_systems" target="_blank">SDSU</a></h3>
+      <p>Dynamical systems, computational PDEs, scientific computing.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2021-2025</div>
+      <h3>B.S. Mechanical Engineering — <a href="https://me.calpoly.edu/" target="_blank">Cal Poly</a></h3>
+      <p>Focus on fluid mechanics and applied math.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="date">Sept 2025 – Feb 2026</div>
+      <h3>Graduate Research Assistant — SDSU</h3>
+      <p>Working with Dr. Efstathis Charalampidis building numerical simulations of nonlinear 
+      dynamical systems. Analyzing stability and bifurcation structure using MATLAB and Python, 
+      with a focus on algorithmic solutions for ODE and PDE systems.</p>
+      <div class="tags">
+        <span class="tag">MATLAB</span>
+        <span class="tag">Python</span>
+        <span class="tag">Dynamical Systems</span>
+        <span class="tag">Numerical Methods</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">June 2024 – June 2025</div>
+      <h3>Engineer Intern — SCS Engineers</h3>
+      <p>Performed data-driven analysis on air quality metrics for regulatory compliance. 
+      Developed monthly reports synthesizing large datasets for state agencies and calibrated 
+      precision air monitoring equipment for environmental reporting.</p>
+      <div class="tags">
+        <span class="tag">Environmental Engineering</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Regulatory Compliance</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">June – Sept 2022</div>
+      <h3>Manufacturing Associate — ThermoFisher Scientific</h3>
+      <p>Designed structured workflows for manufacturing processes, built a collaborative 
+      task-tracking system to improve cross-functional visibility, and managed technical 
+      documentation and component tracking.</p>
+      <div class="tags">
+        <span class="tag">Workflow Design</span>
+        <span class="tag">Technical Documentation</span>
+        <span class="tag">Manufacturing</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>WSINDy for Chaotic Dynamical Systems</h3>
+        Implemented Weak Sparse Identification of Nonlinear Dynamics 
+            (<a href="https://arxiv.org/abs/2007.02848" target="_blank">WSINDy</a>) 
+            on various dynamical systems to identify and recover governing equations from noisy data. 
+            Specifically implemented WSINDy on the Lorenz 63 system, an augmented perturbed Lorenz system, 
+            and an Extremum Seeking Control system to explore applications on higher dimensional and 
+            slightly perturbed systems. Numerics were done via Python.
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Dynamical Systems</span>
+          <span class="tag">Scientific Computing</span>
+          <span class="tag">Equation Discovery</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1XLS4cSuhWwByAWkprMNbnlLymVmWm8Q3/view?usp=sharing" target="_blank">View Paper →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Terrarium.jl Contribution — Soil Heat Diffusion Example</h3>
+        Contributed a validated 1D soil heat diffusion simulation to an open-source
+        Julia package, verified against an analytical solution with sinusoidal surface forcing.
+        <div class="tags">
+          <span class="tag">Julia</span>
+          <span class="tag">Open Source</span>
+          <span class="tag">Numerical PDEs</span>
+          <span class="tag">Scientific Software</span>
+        </div>
+        <a href="https://github.com/NumericalEarth/Terrarium.jl/pull/103" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Chaos and Localization Phenomena in the Discrete Nonlinear Schrödinger Lattice</h3>
+        Used the Discrete Nonlinear Schrödinger Lattice to show how a system governed by a simple 
+        nonlinear recurrence can generate intricate spatial structures through purely geometric 
+        mechanisms. Did so by:
+        <ul style="padding-left: 20px;">
+            <li><p>Recasting the steady state Discrete Nonlinear Schrödinger lattice equation to a 2D map</p></li>
+            <li><p>Analyzing how localized modes, periodic structures, and chaotic spatial patterns arise from invariant manifolds</p></li>
+            <li><p>Examining bright and dark solitons leading to heteroclinic and homoclinic orbits of the map, respectively</p></li>
+            <li><p>Conducting a bifurcation analysis that shows the onset of chaotic behavior.</p></li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Bifurcation Analysis</span>
+          <span class="tag">Dynamical Systems</span>
+          <span class="tag">Nonlinear Waves</span>
+          <span class="tag">Chaos Theory</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1FdJHyb8VSfyam92I2d4mpJvQQiyho7iD/view?usp=sharing" target="_blank">View Paper →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Modeling the Impact of Temperature and Rainfall on Dengue Fever Occurences</h3>
+        This project extends an existing temperature-driven dengue transmission model by adding 
+        seasonal rainfall effects on mosquito habitat and survival, creating a more complete 
+        picture of how climate drives disease spread. Using coupled differential equations, 
+        the model simulates mosquito and human infection dynamics, finding that epidemic outbreaks
+        closely follow peaks in rainfall and mosquito abundance. Validated against climate 
+        and dengue data from Nepal, the model demonstrates how joint temperature-rainfall variability 
+        generates the recurring seasonal epidemic waves observed in real-world dengue transmission.
+        <div class="tags">
+          <span class="tag">Mathematical Modeling</span>
+          <span class="tag">ODEs</span>
+          <span class="tag">Data Validation</span>
+          <span class="tag">Epidemiology</span>
+        </div>
+        <a href="https://drive.google.com/file/d/13Pkieav3C6YVkcFKs71XfBZukWoNx840/view?usp=sharing" target="_blank">View Paper →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>ODE Analysis of Odell's 1980 Predator Prey Model</h3>
+        Analyzed the Odell predator-prey model from Strogatz's Nonlinear Dynamics and Chaos using qualitative 
+        phase-plane methods, focusing on nullclines, equilibrium stability, and how system behavior 
+        shifts with a parameter. Analytically, the model predicts transcritical and Hopf bifurcations. 
+        These transitions are illustrated through numerical phase portraits, time series, and 
+        trajectory plots.
+        <div class="tags">
+          <span class="tag">Phase Plane Analysis</span>
+          <span class="tag">Bifurcation Theory</span>
+          <span class="tag">ODEs</span>
+          <span class="tag">Numerical Simulation</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1u8nVjCkxOzordriWHmHEI_iIkBwiPdsJ/view?usp=sharing" target="_blank">View Project →</a>
+      </div>    
+      <!-- Add more project cards here -->
+
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:g.elena.miralles@gmail.com">g.elena.miralles@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/elenamiralles" target="_blank">github.com/elenamiralles</a></p>
+      <p>LinkedIn: <a href="www.linkedin.com/in/georgiaelenamiralles" target="_blank">linkedin.com/in/georgiaelenamiralles
+
+</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Georgia Miralles · Built with GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
