@@ -55,6 +55,34 @@
       color: #1a1a2e;
     }
 
+    .about-layout {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .about-photo {
+      flex-shrink: 0;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid #e0e0e0;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    @media (max-width: 560px) {
+      .about-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
     .project-card {
       background: white;
       border: 1px solid #e5e5e5;
@@ -97,6 +125,18 @@
       font-size: 0.85rem;
       color: #999;
     }
+
+    .timeline { border-left: 2px solid #e0e0e0; padding-left: 24px; }
+    .timeline-item { margin-bottom: 24px; position: relative; }
+    .timeline-item::before {
+      content: '';
+      width: 10px; height: 10px;
+      background: #3b5bdb;
+      border-radius: 50%;
+      position: absolute;
+      left: -30px; top: 6px;
+    }
+    .timeline-item .date { font-size: 0.85rem; color: #888; }
   </style>
 </head>
 <body>
@@ -118,108 +158,114 @@
 
     <section id="about">
       <h2>About</h2>
-      <p>
-        I'm a first-year M.S. student in Applied Mathematics at San Diego State University,
-        with a background in Mechanical Engineering from Cal Poly SLO. My work sits at the
-        intersection of dynamical systems, computational PDEs, and scientific computing.
-        I'm especially interested in data-driven modeling and environmental applications.
-      </p>
-
+      <div class="about-layout">
+<img
+  src="/georgiaelena/DSC-0197.jpg"
+  alt="Georgia Miralles"
+  class="about-photo"
+/>
+        <div class="about-text">
+          <p>
+            I'm a first-year M.S. student in Applied Mathematics at San Diego State University,
+            with a B.S. in Mechanical Engineering from Cal Poly SLO. My path into applied math
+            grew directly out of engineering practice: working on air quality compliance at SCS Engineers
+            showed me how much real environmental problems depend on getting the underlying models right,
+            and I wanted the mathematical depth to do that well.
+          </p>
+          <p style="margin-top: 12px;">
+            My work now sits at the intersection of dynamical systems, computational PDEs, and
+            scientific computing. I'm especially drawn to problems where physical intuition
+            and rigorous analysis inform each other — whether that's equation discovery from
+            noisy data, environmental transport modeling, or the structure of nonlinear systems.
+            I bring an engineer's instinct for what matters in practice alongside the mathematical
+            tools to dig into why.
+          </p>
+        </div>
+      </div>
     </section>
 
+    <section id="education">
+      <h2>Education</h2>
+      <div class="timeline">
 
-    <style>
-  .timeline { border-left: 2px solid #e0e0e0; padding-left: 24px; }
-  .timeline-item { margin-bottom: 24px; position: relative; }
-  .timeline-item::before {
-    content: '';
-    width: 10px; height: 10px;
-    background: #3b5bdb;
-    border-radius: 50%;
-    position: absolute;
-    left: -30px; top: 6px;
-  }
-  .timeline-item .date { font-size: 0.85rem; color: #888; }
-</style>
+        <div class="timeline-item">
+          <div class="date">2025 – present</div>
+          <div class="date">Expected Matriculation May 2027</div>
+          <h3>M.S. Applied Mathematics — <a href="https://math.sdsu.edu/programs/masters_mathematics/ms_applied_mathematics_dynamical_systems" target="_blank">SDSU</a></h3>
+          <p>Dynamical systems, computational PDEs, scientific computing.</p>
+        </div>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="timeline">
+        <div class="timeline-item">
+          <div class="date">2021–2025</div>
+          <h3>B.S. Mechanical Engineering — <a href="https://me.calpoly.edu/" target="_blank">Cal Poly SLO</a></h3>
+          <p>Focus on fluid mechanics and applied math. Cal Poly's learn-by-doing curriculum
+          meant building and testing things from day one — an approach that shapes how I work
+          through problems now.</p>
+        </div>
 
-    <div class="timeline-item">
-      <div class="date">2025 – present</div>
-      <div class="date">Expected Matriculation May 2027</div>
-      <h3>M.S. Applied Mathematics — <a href="https://math.sdsu.edu/programs/masters_mathematics/ms_applied_mathematics_dynamical_systems" target="_blank">SDSU</a></h3>
-      <p>Dynamical systems, computational PDEs, scientific computing.</p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="date">2021-2025</div>
-      <h3>B.S. Mechanical Engineering — <a href="https://me.calpoly.edu/" target="_blank">Cal Poly</a></h3>
-      <p>Focus on fluid mechanics and applied math.</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="date">Sept 2025 – Feb 2026</div>
-      <h3>Graduate Research Assistant — SDSU</h3>
-      <p>Working with Dr. Efstathis Charalampidis building numerical simulations of nonlinear 
-      dynamical systems. Analyzing stability and bifurcation structure using MATLAB and Python, 
-      with a focus on algorithmic solutions for ODE and PDE systems.</p>
-      <div class="tags">
-        <span class="tag">MATLAB</span>
-        <span class="tag">Python</span>
-        <span class="tag">Dynamical Systems</span>
-        <span class="tag">Numerical Methods</span>
       </div>
-    </div>
+    </section>
 
-    <div class="timeline-item">
-      <div class="date">June 2024 – June 2025</div>
-      <h3>Engineer Intern — SCS Engineers</h3>
-      <p>Performed data-driven analysis on air quality metrics for regulatory compliance. 
-      Developed monthly reports synthesizing large datasets for state agencies and calibrated 
-      precision air monitoring equipment for environmental reporting.</p>
-      <div class="tags">
-        <span class="tag">Environmental Engineering</span>
-        <span class="tag">Data Analysis</span>
-        <span class="tag">Regulatory Compliance</span>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="date">Sept 2025 – Feb 2026</div>
+          <h3>Graduate Research Assistant — SDSU</h3>
+          <p>Working with Dr. Efstathis Charalampidis building numerical simulations of nonlinear
+          dynamical systems. Analyzing stability and bifurcation structure using MATLAB and Python,
+          with a focus on algorithmic solutions for ODE and PDE systems.</p>
+          <div class="tags">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Python</span>
+            <span class="tag">Dynamical Systems</span>
+            <span class="tag">Numerical Methods</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">June 2024 – June 2025</div>
+          <h3>Engineer Intern — SCS Engineers</h3>
+          <p>Worked on air quality monitoring and regulatory compliance for state agency clients.
+          Collected and analyzed large environmental datasets to produce monthly compliance reports,
+          and calibrated precision air monitoring instrumentation. This role is where I first saw
+          the limits of standard engineering tools for capturing complex environmental dynamics —
+          and what motivated me to pursue applied mathematics with a focus on environmental modeling.</p>
+          <div class="tags">
+            <span class="tag">Environmental Engineering</span>
+            <span class="tag">Air Quality</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Regulatory Compliance</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">June – Sept 2022</div>
+          <h3>Manufacturing Associate — ThermoFisher Scientific</h3>
+          <p>Designed structured workflows for manufacturing processes, built a collaborative
+          task-tracking system to improve cross-functional visibility, and managed technical
+          documentation and component tracking.</p>
+          <div class="tags">
+            <span class="tag">Workflow Design</span>
+            <span class="tag">Technical Documentation</span>
+            <span class="tag">Manufacturing</span>
+          </div>
+        </div>
+
       </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="date">June – Sept 2022</div>
-      <h3>Manufacturing Associate — ThermoFisher Scientific</h3>
-      <p>Designed structured workflows for manufacturing processes, built a collaborative 
-      task-tracking system to improve cross-functional visibility, and managed technical 
-      documentation and component tracking.</p>
-      <div class="tags">
-        <span class="tag">Workflow Design</span>
-        <span class="tag">Technical Documentation</span>
-        <span class="tag">Manufacturing</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+    </section>
 
     <section id="projects">
       <h2>Projects</h2>
 
       <div class="project-card">
         <h3>WSINDy for Chaotic Dynamical Systems</h3>
-        Implemented Weak Sparse Identification of Nonlinear Dynamics 
-            (<a href="https://arxiv.org/abs/2007.02848" target="_blank">WSINDy</a>) 
-            on various dynamical systems to identify and recover governing equations from noisy data. 
-            Specifically implemented WSINDy on the Lorenz 63 system, an augmented perturbed Lorenz system, 
-            and an Extremum Seeking Control system to explore applications on higher dimensional and 
+        Implemented Weak Sparse Identification of Nonlinear Dynamics
+            (<a href="https://arxiv.org/abs/2007.02848" target="_blank">WSINDy</a>)
+            on various dynamical systems to identify and recover governing equations from noisy data.
+            Specifically implemented WSINDy on the Lorenz 63 system, an augmented perturbed Lorenz system,
+            and an Extremum Seeking Control system to explore applications on higher dimensional and
             slightly perturbed systems. Numerics were done via Python.
         <div class="tags">
           <span class="tag">Python</span>
@@ -227,7 +273,7 @@
           <span class="tag">Scientific Computing</span>
           <span class="tag">Equation Discovery</span>
         </div>
-        <a href="https://drive.google.com/file/d/1XLS4cSuhWwByAWkprMNbnlLymVmWm8Q3/view?usp=sharing" target="_blank">View Paper →</a>
+        <a href="https://drive.google.com/file/d/1XLS4cSuhWwByAWkprMNbnlLymVmWm8Q3/view?usp=sharing" target="_blank">View Paper</a>
       </div>
 
       <div class="project-card">
@@ -240,13 +286,52 @@
           <span class="tag">Numerical PDEs</span>
           <span class="tag">Scientific Software</span>
         </div>
-        <a href="https://github.com/NumericalEarth/Terrarium.jl/pull/103" target="_blank">View on GitHub →</a>
+        <a href="https://github.com/NumericalEarth/Terrarium.jl/pull/103" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Wind Turbine Rotor Design & Testing</h3>
+        Designed and fabricated a three-bladed wind turbine rotor for competition at the
+        Cal Poly Wind Power Research Center. Applied blade element momentum theory to compute
+        chord and twist distributions, then manufactured the blades from PVC using heat-forming
+        techniques to approximate airfoil camber within tight material and budget constraints.
+        The rotor successfully generated measurable power in field testing. The gap between
+        predicted and measured performance prompted analysis of blade-to-blade consistency
+        and the aerodynamic cost of fixed pitch — the kind of modeling question that pushed
+        me toward applied mathematics.
+        <div class="tags">
+          <span class="tag">Aerodynamics</span>
+          <span class="tag">BEM Theory</span>
+          <span class="tag">Fabrication</span>
+          <span class="tag">Energy Systems</span>
+          <span class="tag">Experimental Testing</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1UhHzE36ClXqWRtdiqli031WUdOTT5wJ-/view?usp=sharing" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Portable Ice Rink — Thermal Systems Design</h3>
+        Designed a portable refrigerated ice rink for Cal Poly Open House, modeling the full
+        thermal system from heat load to hardware selection. Built a 2D finite difference
+        conduction model in Excel to determine steady-state temperature distributions across
+        ice, insulation, and concrete layers, and used Engineering Equation Solver to size
+        PEX tube spacing, refrigerant temperatures, and flow rates for both an 8-hour and
+        24-hour freeze cycle. Selected pump and chiller hardware based on system curves and
+        operating point analysis, and produced a full cost estimate for both designs.
+        <div class="tags">
+          <span class="tag">Heat Transfer</span>
+          <span class="tag">Finite Difference Methods</span>
+          <span class="tag">Thermal Systems</span>
+          <span class="tag">EES</span>
+          <span class="tag">Systems Design</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1gYx86_qcY-IKIMzV3RSgCbaxL--2iKhf/view?usp=sharing" target="_blank">View Project</a>
       </div>
 
       <div class="project-card">
         <h3>Chaos and Localization Phenomena in the Discrete Nonlinear Schrödinger Lattice</h3>
-        Used the Discrete Nonlinear Schrödinger Lattice to show how a system governed by a simple 
-        nonlinear recurrence can generate intricate spatial structures through purely geometric 
+        Used the Discrete Nonlinear Schrödinger Lattice to show how a system governed by a simple
+        nonlinear recurrence can generate intricate spatial structures through purely geometric
         mechanisms. Did so by:
         <ul style="padding-left: 20px;">
             <li><p>Recasting the steady state Discrete Nonlinear Schrödinger lattice equation to a 2D map</p></li>
@@ -260,17 +345,17 @@
           <span class="tag">Nonlinear Waves</span>
           <span class="tag">Chaos Theory</span>
         </div>
-        <a href="https://drive.google.com/file/d/1FdJHyb8VSfyam92I2d4mpJvQQiyho7iD/view?usp=sharing" target="_blank">View Paper →</a>
+        <a href="https://drive.google.com/file/d/1FdJHyb8VSfyam92I2d4mpJvQQiyho7iD/view?usp=sharing" target="_blank">View Paper</a>
       </div>
 
       <div class="project-card">
         <h3>Modeling the Impact of Temperature and Rainfall on Dengue Fever Occurences</h3>
-        This project extends an existing temperature-driven dengue transmission model by adding 
-        seasonal rainfall effects on mosquito habitat and survival, creating a more complete 
-        picture of how climate drives disease spread. Using coupled differential equations, 
+        This project extends an existing temperature-driven dengue transmission model by adding
+        seasonal rainfall effects on mosquito habitat and survival, creating a more complete
+        picture of how climate drives disease spread. Using coupled differential equations,
         the model simulates mosquito and human infection dynamics, finding that epidemic outbreaks
-        closely follow peaks in rainfall and mosquito abundance. Validated against climate 
-        and dengue data from Nepal, the model demonstrates how joint temperature-rainfall variability 
+        closely follow peaks in rainfall and mosquito abundance. Validated against climate
+        and dengue data from Nepal, the model demonstrates how joint temperature-rainfall variability
         generates the recurring seasonal epidemic waves observed in real-world dengue transmission.
         <div class="tags">
           <span class="tag">Mathematical Modeling</span>
@@ -278,15 +363,15 @@
           <span class="tag">Data Validation</span>
           <span class="tag">Epidemiology</span>
         </div>
-        <a href="https://drive.google.com/file/d/13Pkieav3C6YVkcFKs71XfBZukWoNx840/view?usp=sharing" target="_blank">View Paper →</a>
+        <a href="https://drive.google.com/file/d/13Pkieav3C6YVkcFKs71XfBZukWoNx840/view?usp=sharing" target="_blank">View Paper</a>
       </div>
 
       <div class="project-card">
         <h3>ODE Analysis of Odell's 1980 Predator Prey Model</h3>
-        Analyzed the Odell predator-prey model from Strogatz's Nonlinear Dynamics and Chaos using qualitative 
-        phase-plane methods, focusing on nullclines, equilibrium stability, and how system behavior 
-        shifts with a parameter. Analytically, the model predicts transcritical and Hopf bifurcations. 
-        These transitions are illustrated through numerical phase portraits, time series, and 
+        Analyzed the Odell predator-prey model from Strogatz's Nonlinear Dynamics and Chaos using qualitative
+        phase-plane methods, focusing on nullclines, equilibrium stability, and how system behavior
+        shifts with a parameter. Analytically, the model predicts transcritical and Hopf bifurcations.
+        These transitions are illustrated through numerical phase portraits, time series, and
         trajectory plots.
         <div class="tags">
           <span class="tag">Phase Plane Analysis</span>
@@ -294,9 +379,8 @@
           <span class="tag">ODEs</span>
           <span class="tag">Numerical Simulation</span>
         </div>
-        <a href="https://drive.google.com/file/d/1u8nVjCkxOzordriWHmHEI_iIkBwiPdsJ/view?usp=sharing" target="_blank">View Project →</a>
-      </div>    
-      <!-- Add more project cards here -->
+        <a href="https://drive.google.com/file/d/1u8nVjCkxOzordriWHmHEI_iIkBwiPdsJ/view?usp=sharing" target="_blank">View Project</a>
+      </div>
 
     </section>
 
@@ -304,9 +388,7 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:g.elena.miralles@gmail.com">g.elena.miralles@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/elenamiralles" target="_blank">github.com/elenamiralles</a></p>
-      <p>LinkedIn: <a href="www.linkedin.com/in/georgiaelenamiralles" target="_blank">linkedin.com/in/georgiaelenamiralles
-
-</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/georgiaelenamiralles" target="_blank">linkedin.com/in/georgiaelenamiralles</a></p>
     </section>
 
   </main>
